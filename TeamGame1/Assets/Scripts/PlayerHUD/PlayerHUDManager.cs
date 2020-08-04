@@ -43,6 +43,7 @@ public class PlayerHUDManager : MonoBehaviour
     public void pause(){
         pauseUI.SetActive(true); 
         pauseButton.SetActive(false);
+        crossHair.SetActive(false);
         Time.timeScale = 0f;
         isPaused = true;
     }
@@ -52,6 +53,7 @@ public class PlayerHUDManager : MonoBehaviour
     public void continuePlay(){
         pauseUI.SetActive(false);
         pauseButton.SetActive(true);
+        crossHair.SetActive(true);
         Time.timeScale = 1f;
         isPaused = false;
     }
