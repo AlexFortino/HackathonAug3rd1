@@ -7,6 +7,7 @@ TagManager:
   - HealthBar
   - PauseUI
   - PauseButton
+  - bullet
   layers:
   - Default
   - TransparentFX
