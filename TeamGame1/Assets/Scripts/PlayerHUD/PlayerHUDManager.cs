@@ -11,6 +11,7 @@ public class PlayerHUDManager : MonoBehaviour
     public GameObject healthBar;
     public GameObject pauseButton;
     public GameObject pauseUI;
+    public GameObject crossHair;
 
     public static bool isPaused = false;
 
@@ -30,6 +31,12 @@ public class PlayerHUDManager : MonoBehaviour
             }else{
                 pause();
             }
+        }
+        crossHair.transform.position = Input.mousePosition;
+        if(crossHair.transform.position.y <= 100){
+            crossHair.SetActive(false);
+        }else{
+            crossHair.SetActive(true);
         }
     }
 
