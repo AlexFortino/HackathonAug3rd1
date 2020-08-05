@@ -5,25 +5,48 @@ using UnityEngine;
 public class weaponScript : MonoBehaviour
 {
     public GameObject bullet;
-    public GameObject gun;
-    public bool shoot = false;
+
+
+
+
+    public float damage = 10f;
+    public float bSpeed = 10f;
+    public float shotDelay = 10f;
+    public float reloadTime = 2f;
+    public int shotCount = 1;
+    public float accuracy = 1f;
+    private bool canShoot = true;
+    private bool fullReload = false;
+
+
+
     // Start is called before the first frame update
     void Start()
     {
         
     }
-    void shoots()
-    {
-        Instantiate(bullet, this.transform.position, this.transform.rotation);
-    }
-
+   
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButton(0))
-        {
-            Invoke("shoots", 1);
-        }
+   
         
+
+        if (Input.GetButtonDown("Fire1") && canShoot)
+        {
+            canShoot = false;
+            Instantiate(bullet, this.transform.position, this.transform.rotation);
+        }
+        if(Input.GetButton("Fire1") && canShoot)
+        {
+            canShoot = false;
+            Instantiate(bullet, this.transform.position, this.transform.rotation);
+        }
+        canShoot = true;
+    }
+    void fire()
+    {
+
+
     }
 }

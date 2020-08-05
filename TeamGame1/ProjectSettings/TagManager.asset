@@ -4,6 +4,9 @@
 TagManager:
   serializedVersion: 2
   tags:
+  - HealthBar
+  - PauseUI
+  - PauseButton
   - bullet
   layers:
   - Default
