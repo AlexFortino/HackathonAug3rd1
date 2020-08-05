@@ -5,6 +5,10 @@ using UnityEngine;
 public class weaponScript : MonoBehaviour
 {
     public GameObject bullet;
+
+
+
+
     public float damage = 10f;
     public float bSpeed = 10f;
     public float shotDelay = 10f;
@@ -15,15 +19,19 @@ public class weaponScript : MonoBehaviour
     private bool fullReload = false;
 
 
+
     // Start is called before the first frame update
     void Start()
     {
         
     }
-
+   
     // Update is called once per frame
     void Update()
     {
+   
+        
+
         if (Input.GetButtonDown("Fire1") && canShoot)
         {
             canShoot = false;
@@ -38,6 +46,7 @@ public class weaponScript : MonoBehaviour
     }
     void fire()
     {
+
 
     }
 }
