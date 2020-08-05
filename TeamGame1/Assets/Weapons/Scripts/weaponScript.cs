@@ -2,18 +2,42 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class weaponScript : MonoBehaviour
+public abstract class weaponScript : MonoBehaviour
 {
     public GameObject bullet;
-    // Start is called before the first frame update
-    void Start()
+    public float damage = 10f;
+    public float bSpeed = 20f;
+    public float shotDelay = 3f;
+    public float reloadTime = 2f;
+    public int shotCount = 1;
+    public float accuracy = 1f;
+    protected bool canShoot = true;
+    private bool fullReload;
+
+
+    public virtual void Start()
+    {
+       
+    }
+    void Update()
+    {
+
+    }
+    public void fire()
     {
         
     }
-
-    // Update is called once per frame
-    void Update()
+    public void reload()
     {
-        Instantiate(bullet, this.transform.position, this.transform.rotation);
+
+    }
+    public void getAmmo()
+    {
+
+    }
+    public void shotCooldown()
+    {
+        canShoot = true;
+
     }
 }
