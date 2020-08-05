@@ -25,7 +25,6 @@ public class enemySpawns : MonoBehaviour
             spawnTimer = 0;
 
         }
-        
     }
     void OnTriggerEnter(Collider other)
     {
