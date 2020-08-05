@@ -105,7 +105,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 7091240314001494058}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1b674b0cb946a049bf0c496a5b9ee66, type: 3}
+  m_Script: {fileID: 11500000, guid: 993ddf3432c15a047a3e13236697e032, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 3407791369173678365, guid: e72d9408ee85e1e4a9e3544a629e9eae, type: 3}
+  damage: 10
+  bSpeed: 20
+  shotDelay: 3
+  reloadTime: 2
+  shotCount: 1
+  accuracy: 1
