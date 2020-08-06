@@ -8,6 +8,8 @@ TagManager:
   - PauseUI
   - PauseButton
   - bullet
+  - Enemy
+  - Tree
   layers:
   - Default
   - TransparentFX
