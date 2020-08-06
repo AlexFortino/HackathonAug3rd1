@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 64707302734696274}
   - component: {fileID: 64707302734696275}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Spawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -111,7 +111,8 @@ MonoBehaviour:
   enemyLevel: 0
   EasyEnemy: {fileID: 4343862489612543652, guid: f01eefc7ddfaace4ba876b376ec0977c,
     type: 3}
-  MediumEnemy: {fileID: 0}
+  MediumEnemy: {fileID: 4343862489612543652, guid: f01eefc7ddfaace4ba876b376ec0977c,
+    type: 3}
   HardEnemy: {fileID: 0}
   BossEnemy: {fileID: 0}
   totalEnemy: 10
