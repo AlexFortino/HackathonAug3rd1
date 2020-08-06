@@ -12,6 +12,8 @@ public abstract class weaponScript : MonoBehaviour
     public int shotCount = 1;
     public float accuracy = 1f;
     protected bool canShoot = true;
+    public int ammo = 10;
+    public int fullAmmo = 10;
     private bool fullReload;
 
 
@@ -21,19 +23,14 @@ public abstract class weaponScript : MonoBehaviour
     }
     void Update()
     {
-
-    }
-    public void fire()
-    {
         
     }
-    public void reload()
+    public virtual void reload()
     {
-
-    }
-    public void getAmmo()
-    {
-
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            ammo = fullAmmo;
+        }
     }
     public void shotCooldown()
     {

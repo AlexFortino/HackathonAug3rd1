@@ -14,21 +14,9 @@ public class pistolClass : weaponScript
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetButtonDown("Fire1") && ammo != 0)
         {
             Instantiate(bullet, transform.position, transform.rotation);
         }
-    }
-    public void fire()
-    {
-        
-    }
-    public void reload()
-    {
-
-    }
-    public void getAmmo()
-    {
-        
     }
 }
