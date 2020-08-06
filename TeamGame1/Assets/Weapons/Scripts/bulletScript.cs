@@ -5,6 +5,7 @@ using UnityEngine;
 public class bulletScript : MonoBehaviour
 {
     public float speed = 20f;
+    public bool isPlayer = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,6 +16,12 @@ public class bulletScript : MonoBehaviour
     void Update()
     {
         transform.Translate(Vector3.forward * speed * Time.deltaTime);
-
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Enemy"))
+        {
+            Destroy(other.gameObject);
+        }
     }
 }

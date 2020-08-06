@@ -8,6 +8,9 @@ TagManager:
   - PauseUI
   - PauseButton
   - bullet
+  - Enemy
+  - Tree
+  - Spawner
   layers:
   - Default
   - TransparentFX

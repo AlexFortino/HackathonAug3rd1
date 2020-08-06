@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class MainMenuManager : MonoBehaviour
 {
@@ -36,6 +37,9 @@ public class MainMenuManager : MonoBehaviour
     public void statisticsButtonSelected(){
         makeAllButtonsInactive();
         statisticsPanel.SetActive(true);
+    }
+    public void levelOneSelected(){
+        SceneManager.LoadScene("LevelOne", LoadSceneMode.Single);
     }
 
     //Additional use methods
