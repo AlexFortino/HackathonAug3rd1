@@ -12,6 +12,7 @@ public class PlayerHUDManager : MonoBehaviour
     public GameObject pauseButton;
     public GameObject pauseUI;
     public GameObject crossHair;
+    public Text waveCountText;
 
     public static bool isPaused = false;
 
@@ -38,6 +39,7 @@ public class PlayerHUDManager : MonoBehaviour
         }else{
             crossHair.SetActive(true);
         }
+        waveCountText.text = GameObject.FindGameObjectWithTag("Spawner").GetComponent<Wave>().getNumWaves().ToString();
     }
 
     public void pause(){
