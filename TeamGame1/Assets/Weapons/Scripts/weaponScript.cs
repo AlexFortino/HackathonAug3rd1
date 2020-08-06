@@ -17,7 +17,7 @@ public abstract class weaponScript : MonoBehaviour
 
     public virtual void Start()
     {
-        
+       
     }
     void Update()
     {
