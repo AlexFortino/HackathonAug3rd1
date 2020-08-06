@@ -7,7 +7,7 @@ public class ARScript : weaponScript
     // Start is called before the first frame update
     void Start()
     {
-        shotDelay = 0.2f;
+        shotDelay = 0.1f;
     }
 
     // Update is called once per frame
