@@ -287,4 +287,8 @@ public class Wave : MonoBehaviour
     {
         Spawn = true;
     }
+
+    public int getNumWaves(){
+        return numWaves;
+    }
 }
