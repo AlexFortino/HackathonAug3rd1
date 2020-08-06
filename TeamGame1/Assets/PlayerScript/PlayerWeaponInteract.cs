@@ -17,7 +17,9 @@ public class PlayerWeaponInteract : MonoBehaviour
     // Update is called once per frame
     void Start()
     {
-        int[] weaponArray = {0 , 1 };
+        List<int> weaponList = new List<int>();
+        weaponList.Add(0);
+        weaponList.Add(1);
         
         if (currentWeapon == 0)
         {
@@ -29,7 +31,7 @@ public class PlayerWeaponInteract : MonoBehaviour
             AR.SetActive(true);
         }
     }
-  
+        
     void changeWeapons(int number)
     {
         if (firstTime)

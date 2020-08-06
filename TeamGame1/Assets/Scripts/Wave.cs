@@ -37,6 +37,7 @@ public class Wave : MonoBehaviour
     public GameObject MediumEnemy;
     public GameObject HardEnemy;
     public GameObject BossEnemy;
+    GameObject Player;
     //----------------------------------
     // End of Enemy Prefabs
     //----------------------------------
@@ -70,10 +71,11 @@ public class Wave : MonoBehaviour
     //----------------------------------
     // End of Different Spawn states and ways of doing them
     //----------------------------------
-   
+    
     void Start()
     {
         // sets a random number for the id of the spawner
+        Player = GameObject.FindGameObjectWithTag("Player");
         SpawnID = Random.Range(1, 500);
     }
    
@@ -131,6 +133,7 @@ public class Wave : MonoBehaviour
                         waveSpawn = true;
                         //increase the number of waves
                         numWaves++;
+                        Player.GetComponent<PlayerUI>().waveEnd();
                     }
                     if(numEnemy == totalEnemy)
                     {
