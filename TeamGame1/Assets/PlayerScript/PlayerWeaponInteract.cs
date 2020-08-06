@@ -32,7 +32,7 @@ public class PlayerWeaponInteract : MonoBehaviour
         }
     }
         
-    void changeWeapons(int number)
+    public void changeWeapons(int number)
     {
         if (firstTime)
         {
