@@ -6,16 +6,16 @@ public class PlayerWeaponInteract : MonoBehaviour
 {
     // Start is called before the first frame update
 
-    GameObject pistolp;
-    GameObject AR;
+    public GameObject pistolp;
+    public GameObject AR;
     
   
-    public int currentWeapon = 0;
+    public int currentWeapon = 3;
     public int previousWeapon = 0;
     bool firstTime = true;
 
     // Update is called once per frame
-    void Start()
+    void Update()
     {
         List<int> weaponList = new List<int>();
         weaponList.Add(0);
