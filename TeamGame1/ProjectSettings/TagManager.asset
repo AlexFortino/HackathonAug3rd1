@@ -11,6 +11,7 @@ TagManager:
   - Enemy
   - Tree
   - Spawner
+  - ShopUI
   layers:
   - Default
   - TransparentFX
