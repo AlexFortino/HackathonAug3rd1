@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 9185879991047940406}
   - component: {fileID: 2063549530191615221}
   - component: {fileID: 8810289957452294190}
-  - component: {fileID: -1465086510250061071}
+  - component: {fileID: -2720202914038931161}
   m_Layer: 0
   m_Name: bullet
   m_TagString: Untagged
@@ -113,7 +113,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &-1465086510250061071
+--- !u!114 &-2720202914038931161
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -126,3 +126,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 20
+  isPlayer: 0
+  AR: {fileID: 7091240314001494058, guid: f603382d0c0261f40b839397822880f9, type: 3}
+  pistol: {fileID: 4074151362222081823, guid: 9afac91a4360857438f637261c0329dd, type: 3}
+  shotgun: {fileID: 7427882299401227035, guid: 7d273b57625ff5244bc71308059be6ee, type: 3}

@@ -6,8 +6,10 @@ public class bulletScript : MonoBehaviour
 {
     public float speed = 20f;
     public bool isPlayer = false;
-    
-    
+    public GameObject AR;
+    public GameObject pistol;
+    public GameObject shotgun;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,9 +24,17 @@ public class bulletScript : MonoBehaviour
     
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Enemy"))
+        if (other.gameObject.CompareTag("Enemy") && AR.activeSelf == true)
         {
-            //other.gameObject.GetComponent<enemyHealth>().takeDamage();
+            other.gameObject.GetComponent<enemyHealth>().takeDamage(AR.GetComponent<ARScript>().damage);
+        }
+        if (other.gameObject.CompareTag("Enemy") && pistol.activeSelf == true)
+        {
+            other.gameObject.GetComponent<enemyHealth>().takeDamage(pistol.GetComponent<pistolClass>().damage);
+        }
+        if (other.gameObject.CompareTag("Enemy") && shotgun.activeSelf == true)
+        {
+            other.gameObject.GetComponent<enemyHealth>().takeDamage(shotgun.GetComponent<shotgunClassd>().damage);
         }
     }
 }

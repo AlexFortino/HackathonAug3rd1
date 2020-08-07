@@ -5,7 +5,7 @@ using UnityEngine;
 public abstract class weaponScript : MonoBehaviour
 {
     public GameObject bullet;
-    public float damage = 10f;
+    public int damage = 10;
     public float bSpeed = 20f;
     public float shotDelay = 3f;
     public float reloadTime = 2f;
