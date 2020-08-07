@@ -4,16 +4,19 @@ using UnityEngine;
 
 public class bulletScript : MonoBehaviour
 {
+    bool runOnce = true;
     public float speed = 20f;
     public bool isPlayer = false;
     public GameObject AR;
     public GameObject pistol;
     public GameObject shotgun;
-
+    public GameObject spawner;
     // Start is called before the first frame update
     void Start()
     {
+        spawner = GameObject.FindGameObjectWithTag("Spawner");
         Destroy(gameObject, 2);
+        
     }
 
     // Update is called once per frame
@@ -24,17 +27,27 @@ public class bulletScript : MonoBehaviour
     
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Enemy") && AR.activeSelf == true)
+        if (other.gameObject.CompareTag("Enemy"))
+            //&& AR.active == true
         {
-            other.gameObject.GetComponent<enemyHealth>().takeDamage(AR.GetComponent<ARScript>().damage);
+            //other.gameObject.GetComponent<enemyHealth>().takeDamage(AR.GetComponent<ARScript>().damage);
+          
+            
+                spawner.GetComponent<Wave>().killEnemy(1);
+                runOnce = false;
+            
+            Destroy(other.gameObject);
+            Destroy(gameObject);
         }
-        if (other.gameObject.CompareTag("Enemy") && pistol.activeSelf == true)
-        {
-            other.gameObject.GetComponent<enemyHealth>().takeDamage(pistol.GetComponent<pistolClass>().damage);
-        }
-        if (other.gameObject.CompareTag("Enemy") && shotgun.activeSelf == true)
-        {
-            other.gameObject.GetComponent<enemyHealth>().takeDamage(shotgun.GetComponent<shotgunClass>().damage);
-        }
+        //if (other.gameObject.CompareTag("Enemy") && pistol.active == true)
+        //{
+        //    other.gameObject.GetComponent<enemyHealth>().takeDamage(pistol.GetComponent<pistolClass>().damage);
+        //    Destroy(other.gameObject);
+        //}
+        //if (other.gameObject.CompareTag("Enemy") && shotgun.active == true)
+        //{
+        //    other.gameObject.GetComponent<enemyHealth>().takeDamage(shotgun.GetComponent<shotgunClass>().damage);
+        //    Destroy(other.gameObject);
+        //}
     }
 }
