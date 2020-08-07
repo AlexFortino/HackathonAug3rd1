@@ -34,7 +34,7 @@ public class bulletScript : MonoBehaviour
         }
         if (other.gameObject.CompareTag("Enemy") && shotgun.activeSelf == true)
         {
-            other.gameObject.GetComponent<enemyHealth>().takeDamage(shotgun.GetComponent<shotgunClassd>().damage);
+            other.gameObject.GetComponent<enemyHealth>().takeDamage(shotgun.GetComponent<shotgunClass>().damage);
         }
     }
 }
