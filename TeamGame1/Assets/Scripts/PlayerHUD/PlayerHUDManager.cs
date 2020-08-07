@@ -25,7 +25,7 @@ public class PlayerHUDManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //healthBar.GetComponent<Slider>().maxValue = player.GetComponent<PlayerHealth>().health;
+        healthBar.GetComponent<Slider>().value = player.GetComponent<PlayerHealth>().health;
         if(Input.GetKeyDown(KeyCode.Escape)){
             if(isPaused){
                 continuePlay();
