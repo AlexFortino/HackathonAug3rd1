@@ -9,7 +9,7 @@ public class weaponFollow : MonoBehaviour
 
     int currentWeapon = 0;
     int previousWeapon = 0;
-    GameObject pistolp;
+    GameObject pistol;
     GameObject AR;
 
 
@@ -27,7 +27,7 @@ public class weaponFollow : MonoBehaviour
         switch (currentWeapon)
         {
             case 0:
-                pistolp.SetActive(true);
+                pistol.SetActive(true);
                 break;
             case 1:
                 AR.SetActive(true);
