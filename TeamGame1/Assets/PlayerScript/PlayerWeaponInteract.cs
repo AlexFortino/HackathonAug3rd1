@@ -15,21 +15,12 @@ public class PlayerWeaponInteract : MonoBehaviour
     bool firstTime = true;
 
     // Update is called once per frame
+   
     void Update()
     {
-        List<int> weaponList = new List<int>();
-        weaponList.Add(0);
-        weaponList.Add(1);
-        
-        if (currentWeapon == 0)
-        {
-            pistolp.SetActive(true);
-
-        }
-        else if(currentWeapon == 1)
-        {
-            AR.SetActive(true);
-        }
+       
+     
+     
     }
         
     public void changeWeapons(int number)
@@ -43,6 +34,15 @@ public class PlayerWeaponInteract : MonoBehaviour
         {
             previousWeapon = currentWeapon;
             currentWeapon = number;
+        }
+        if (currentWeapon == 0)
+        {
+            pistolp.SetActive(true);
+
+        }
+        else if (currentWeapon == 1)
+        {
+            AR.SetActive(true);
         }
     }
     public int getPreviousWeapon()

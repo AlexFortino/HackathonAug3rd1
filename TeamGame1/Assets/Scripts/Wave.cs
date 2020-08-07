@@ -76,7 +76,8 @@ public class Wave : MonoBehaviour
     {
         // sets a random number for the id of the spawner
         Player = GameObject.FindGameObjectWithTag("Player");
-        SpawnID = Random.Range(1, 500);
+        SpawnID = 1;
+            //Random.Range(1, 500);
     }
    
     // Draws a cube to show where the spawn point is... Useful if you don't have a object that show the spawn point
@@ -90,6 +91,7 @@ public class Wave : MonoBehaviour
    
     void Update ()
     {
+      
         if(Spawn)
         {
             // Spawns enemies everytime one dies
@@ -127,7 +129,7 @@ public class Wave : MonoBehaviour
                         //spawns an enemy
                         spawnEnemy();
                     }
-                    if (numEnemy == 0)
+                    if (numEnemy <= 0)
                     {
                         // enables the wave spawner
                         waveSpawn = true;
@@ -259,6 +261,7 @@ public class Wave : MonoBehaviour
         if (SpawnID == sID)
         {
             numEnemy--;
+            Debug.Log(numEnemy);
         }
     }
     //enable the spawner based on spawnerID

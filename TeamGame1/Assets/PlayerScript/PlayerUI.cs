@@ -18,6 +18,7 @@ public class PlayerUI : MonoBehaviour
         //And Pause Game
         UIShopCanvas.SetActive(true);
         Time.timeScale = 0;
+        
     }
     public void setAR (){
         Debug.Log("Ran");
