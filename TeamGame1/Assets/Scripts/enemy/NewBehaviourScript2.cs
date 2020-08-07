@@ -21,7 +21,7 @@ public class NewBehaviourScript2 : MonoBehaviour
         {
             Instantiate(enemyBullet, this.transform.position, this.transform.rotation);
             shotTimer = 0;
-            Destroy(this.gameObject, 5.0f);
+           // Destroy(this.gameObject, 5.0f);
         }
 
         

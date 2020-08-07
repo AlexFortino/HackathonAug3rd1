@@ -5,31 +5,34 @@ using UnityEngine;
 public class PlayerWeaponInteract : MonoBehaviour
 {
     // Start is called before the first frame update
-    public bool pistolIsTrue = true;
-    GameObject pistol;
-    GameObject AR;
+
+    public GameObject pistolp;
+    public GameObject AR;
     
-    public GameObject weaponLocation;
-    int currentWeapon = 0;
-    int previousWeapon = 0;
+  
+    public int currentWeapon = 3;
+    public int previousWeapon = 0;
     bool firstTime = true;
 
     // Update is called once per frame
-    void Start()
-    {
-      
-       
-        if (pistolIsTrue)
-        {
-            pistol.SetActive(true);
-
-        }
-    }
     void Update()
     {
+        List<int> weaponList = new List<int>();
+        weaponList.Add(0);
+        weaponList.Add(1);
         
+        if (currentWeapon == 0)
+        {
+            pistolp.SetActive(true);
+
+        }
+        else if(currentWeapon == 1)
+        {
+            AR.SetActive(true);
+        }
     }
-    void changeWeapons(int number)
+        
+    public void changeWeapons(int number)
     {
         if (firstTime)
         {
