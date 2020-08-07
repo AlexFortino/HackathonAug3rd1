@@ -555,7 +555,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1425814443739648, guid: b8472c75b2bc2ee4b98e87869dace24f, type: 3}
       propertyPath: m_Name
-      value: pistol_1 (1)
+      value: pistol
       objectReference: {fileID: 0}
     - target: {fileID: 1425814443739648, guid: b8472c75b2bc2ee4b98e87869dace24f, type: 3}
       propertyPath: m_IsActive
